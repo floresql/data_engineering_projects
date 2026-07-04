@@ -10,6 +10,8 @@ requires-python = ">=3.10"
 dependencies = [
     "dagster>=1.13.12",
     "dagster-dbt>=0.29.12",
+    "databricks>=0.2",
+    "databricks-sql-connector>=4.2.6",
     "dbt-databricks>=1.12.1",
     "pandas>=2.3.3",
     "requests>=2.34.2",
