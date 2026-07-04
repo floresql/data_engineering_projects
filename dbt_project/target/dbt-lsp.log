@@ -533,3 +533,4 @@ There are 2 unused configuration paths:
 14:06:13.449226 [info ]: Finished scheduling [  0.00s]
 14:06:13.449847 [info ]: Cached model count updated: 1 models (accurate)
 14:06:13.707878 [debug]: License check failed: Feature not licensed: 'lineage'
+14:06:20.941974 [debug]: License check failed: Feature not licensed: 'lineage'
