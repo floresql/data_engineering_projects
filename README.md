@@ -86,19 +86,14 @@ uv sync
 
 ### 3. Environment variables
 
-Two separate things need the token — they're not interchangeable:
-
-**a) For `tests/databricks_connection.py`** (loaded via `python-dotenv`), create a `.env` file in the project root (gitignored, never commit this):
+Create a `.env` file in the project root (gitignored, never commit this). It's the single source of truth for both the connection smoke test and dbt itself:
 ```bash
 DATABRICKS_HOST=dbc-xxxxxxxx-xxxx.cloud.databricks.com
 DATABRICKS_HTTP_PATH=/sql/1.0/warehouses/xxxxxxxxxxxxx
 DATABRICKS_TOKEN=dapiXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-**b) For dbt itself**, `dbt_project/profiles.yml` reads the token via `{{ env_var('DBT_DATABRICKS_TOKEN') }}`. dbt does not read `.env` files, so this must be a real OS environment variable — set it in your shell profile (or as a persistent env var on Windows), not just in `.env`:
-```bash
-export DBT_DATABRICKS_TOKEN=dapiXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
+`tests/databricks_connection.py` loads it via `python-dotenv`. dbt doesn't read `.env` files on its own, so `dbt_project/profiles.yml` reads `{{ env_var('DATABRICKS_TOKEN') }}`, and every `uv run dbt ...` command below passes `--env-file` to inject it — no separate OS-level environment variable needed.
 
 ### 4. Verify the connection
 ```bash
@@ -108,8 +103,8 @@ uv run python tests/databricks_connection.py
 ### 5. Run dbt
 ```bash
 cd dbt_project
-uv run dbt debug
-uv run dbt build
+uv run --env-file ../.env dbt debug
+uv run --env-file ../.env dbt build
 ```
 
 ### 6. Run Dagster locally

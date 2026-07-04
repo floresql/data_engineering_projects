@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "Eddie Flores", email = "gefloresql@gmail.com" }
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
     "dagster>=1.13.12",
     "dagster-dbt>=0.29.12",
