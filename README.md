@@ -1,4 +1,4 @@
-# dbt_pipeline1
+# dbt_pipeline
 
 A portfolio data engineering pipeline demonstrating ingestion, transformation, and orchestration using a modern, open-source-friendly stack.
 
@@ -35,45 +35,33 @@ GitHub Actions (lint, test, scheduled dbt build) + dbt docs on GitHub Pages
 
 ## Project structure
 
+Current layout, with pieces still to be built marked `(planned)`:
+
 ```
-dbt_pipeline1/
+dbt_pipeline/
 ├── src/
-│   └── my_pipeline/
+│   └── dbt_pipeline/
 │       ├── __init__.py
-│       ├── ingestion/
-│       │   ├── __init__.py
-│       │   ├── client.py              # requests session wrapper w/ retries
-│       │   └── extract.py             # source-specific pull logic
-│       ├── io/
-│       │   └── databricks_loader.py   # writes DataFrames to Unity Catalog tables
-│       └── utils/
-│           └── logging.py
+│       ├── ingestion/                 # (planned) client.py, extract.py
+│       └── io/                        # (planned) databricks_loader.py
 │
-├── dagster_project/
-│   ├── __init__.py
-│   ├── assets/
-│   │   ├── ingestion_assets.py        # Dagster assets wrapping ingestion functions
-│   │   └── dbt_assets.py              # auto-generated assets from dbt manifest.json
-│   ├── definitions.py                 # Definitions object, schedules/sensors
-│   └── resources.py                   # Databricks SQL + dbt CLI resources
+├── dagster_project/                   # (planned) assets, definitions, resources
 │
 ├── dbt_project/
 │   ├── models/
 │   │   ├── staging/
 │   │   ├── intermediate/
 │   │   └── marts/
-│   ├── tests/                         # custom singular dbt tests
+│   ├── tests/                         # (planned) custom singular dbt tests
 │   ├── dbt_project.yml
-│   └── profiles.yml                   # dbt-databricks connection config
+│   └── profiles.yml                   # dbt-databricks connection config (gitignored)
 │
 ├── tests/
-│   ├── test_ingestion.py              # pytest for the ingestion layer
 │   └── databricks_connection.py       # manual connection smoke test
 │
-├── .github/
-│   └── workflows/
-│       └── ci.yml                     # lint, pytest, scheduled dbt build
+├── .github/                           # (planned) workflows/ci.yml — lint, pytest, scheduled dbt build
 │
+├── databricks.yml                     # Databricks Asset Bundle config
 ├── pyproject.toml
 ├── uv.lock
 ├── .env                               # local secrets (gitignored, not committed)
@@ -85,23 +73,31 @@ dbt_pipeline1/
 
 ### 1. Clone and install dependencies
 ```bash
-git clone https://github.com/<your-username>/dbt_pipeline1.git
-cd dbt_pipeline1
+git clone https://github.com/floresql/data_engineering_projects.git dbt_pipeline
+cd dbt_pipeline
 uv sync
 ```
 
 ### 2. Databricks
 - Sign up for [Databricks Free Edition](https://www.databricks.com/learn/free-edition).
-- Create a Unity Catalog catalog `portfolio` with schemas `raw`, `staging`, `marts`.
+- Create a Unity Catalog catalog with `staging`/`marts` schemas (see `dbt_project/dbt_project.yml` for expected schema names).
 - Create a small serverless SQL Warehouse and note its **Server hostname** and **HTTP path**.
-- Generate a Personal Access Token (Settings → Developer → Access Tokens).
+- Generate a Personal Access Token (Settings → Developer → Access Tokens) with SQL warehouse access.
 
 ### 3. Environment variables
-Create a `.env` file in the project root (never commit this):
+
+Two separate things need the token — they're not interchangeable:
+
+**a) For `tests/databricks_connection.py`** (loaded via `python-dotenv`), create a `.env` file in the project root (gitignored, never commit this):
 ```bash
 DATABRICKS_HOST=dbc-xxxxxxxx-xxxx.cloud.databricks.com
 DATABRICKS_HTTP_PATH=/sql/1.0/warehouses/xxxxxxxxxxxxx
 DATABRICKS_TOKEN=dapiXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
+**b) For dbt itself**, `dbt_project/profiles.yml` reads the token via `{{ env_var('DBT_DATABRICKS_TOKEN') }}`. dbt does not read `.env` files, so this must be a real OS environment variable — set it in your shell profile (or as a persistent env var on Windows), not just in `.env`:
+```bash
+export DBT_DATABRICKS_TOKEN=dapiXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 ### 4. Verify the connection
