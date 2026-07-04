@@ -59,3 +59,80 @@ There are 3 unused configuration paths:
 14:01:44.526253 [info ]: Finished scheduling [  0.00s]
 14:01:44.526462 [info ]: Finished loading project [  0.15s]
 14:01:44.527195 [info ]: Cached model count updated: 0 models (accurate)
+14:02:41.963949 [info ]: Started loading project
+14:02:41.964704 [info ]: Loading profiles.yml
+14:02:42.004644 [info ]: Finished loading project [  0.04s]
+14:02:42.005043 [info ]: Cached model count updated: 0 models (accurate)
+14:02:43.648917 [info ]: Started loading project
+14:02:43.649778 [info ]: Loading profiles.yml
+14:02:43.716818 [info ]: Cached model count updated: 0 models (estimate)
+14:02:43.716851 [info ]: Cached model count updated: 0 models (accurate)
+14:02:43.716869 [info ]: Started scheduling
+14:02:43.716901 [info ]: Finished scheduling [  0.00s]
+14:02:43.716918 [debug]: Compilation - 0 nodes selected: {}
+14:02:43.716937 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+14:02:43.718270 [debug]: License check failed: Feature not licensed: 'lineage'
+14:02:43.718631 [info ]: Started building task graph
+14:02:43.718660 [info ]: Finished building task graph [  0.00s]
+14:02:43.775982 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. fs lint/format only supports SQLFluff templater 'dbt' or 'dbt-cloud'. Continuing anyway.
+14:02:43.780032 [info ]:    Started linting
+14:02:43.780349 [info ]:   Finished [  0.00s] linting
+14:02:43.786483 [info ]: Started scheduling
+14:02:43.786521 [info ]: Finished scheduling [  0.00s]
+14:02:43.786631 [info ]: Finished loading project [  0.14s]
+14:02:43.787119 [info ]: Cached model count updated: 0 models (accurate)
+14:02:59.088577 [info ]: Started loading project
+14:02:59.089295 [info ]: Loading profiles.yml
+14:02:59.095888 [info ]: Started loading project
+14:02:59.096532 [info ]: Loading profiles.yml
+14:02:59.096598 [info ]: Finished loading project [  0.01s]
+14:02:59.102495 [debug]:    Started loading packages
+14:02:59.104783 [debug]:     Loaded [  0.00s] packages
+14:02:59.105628 [info ]: Finished loading project [  0.01s]
+14:02:59.105938 [info ]: Started parsing
+14:02:59.168248 [warn ]: [UnusedResourceConfigPath (dbt1097)]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_pipeline.intermediate
+- models.dbt_pipeline.marts
+- models.dbt_pipeline.staging
+14:02:59.170694 [info ]: Cached model count updated: 0 models (estimate)
+14:02:59.170716 [info ]: Cached model count updated: 0 models (accurate)
+14:02:59.170740 [info ]: Started scheduling
+14:02:59.170777 [info ]: Finished scheduling [  0.00s]
+14:02:59.170803 [debug]: Compilation - 0 nodes selected: {}
+14:02:59.170839 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+14:02:59.170867 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+14:02:59.170882 [info ]: Started scheduling
+14:02:59.170899 [info ]: Finished scheduling [  0.00s]
+14:02:59.172483 [debug]: License check failed: Feature not licensed: 'lineage'
+14:02:59.173000 [info ]: Started building task graph
+14:02:59.173031 [info ]: Finished building task graph [  0.00s]
+14:02:59.236823 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. fs lint/format only supports SQLFluff templater 'dbt' or 'dbt-cloud'. Continuing anyway.
+14:02:59.241758 [info ]:    Started linting (1 items)
+14:02:59.243130 [info ]:    Started linting macros/generate_schema_name.sql
+14:02:59.252811 [info ]:     Linted [  0.01s] macros/generate_schema_name.sql
+14:02:59.252951 [info ]:   Finished [  0.01s] linting (1 items)
+14:02:59.258387 [info ]: Started scheduling
+14:02:59.258433 [info ]: Finished scheduling [  0.00s]
+14:02:59.263316 [info ]: Cached model count updated: 0 models (accurate)
+14:02:59.263411 [info ]: Finished parsing [  0.16s]
+14:03:00.892077 [info ]: Started loading project
+14:03:00.892847 [info ]: Loading profiles.yml
+14:03:00.951348 [info ]: Cached model count updated: 0 models (estimate)
+14:03:00.951380 [info ]: Cached model count updated: 0 models (accurate)
+14:03:00.951397 [info ]: Started scheduling
+14:03:00.951437 [info ]: Finished scheduling [  0.00s]
+14:03:00.951452 [debug]: Compilation - 0 nodes selected: {}
+14:03:00.951485 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+14:03:00.953015 [debug]: License check failed: Feature not licensed: 'lineage'
+14:03:00.953387 [info ]: Started building task graph
+14:03:00.953424 [info ]: Finished building task graph [  0.00s]
+14:03:01.010285 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. fs lint/format only supports SQLFluff templater 'dbt' or 'dbt-cloud'. Continuing anyway.
+14:03:01.013648 [info ]:    Started linting (1 items)
+14:03:01.013873 [info ]:    Started linting macros/generate_schema_name.sql
+14:03:01.014257 [info ]:     Linted [  0.00s] macros/generate_schema_name.sql
+14:03:01.014366 [info ]:   Finished [  0.00s] linting (1 items)
+14:03:01.019682 [info ]: Started scheduling
+14:03:01.019727 [info ]: Finished scheduling [  0.00s]
+14:03:01.019859 [info ]: Finished loading project [  0.13s]
+14:03:01.020503 [info ]: Cached model count updated: 0 models (accurate)
