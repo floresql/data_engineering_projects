@@ -1,0 +1,1 @@
+select 1 as id, 'scaffold_ok' as status

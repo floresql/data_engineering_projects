@@ -1,0 +1,154 @@
+==================== 2026-07-04T14:53:46.181715Z | 019f2d9f-0d3f-7d01-8192-40cef18b68e6 ====================
+==================== 2026-07-04T14:53:49.719577Z | 019f2d9f-1b13-70f0-8659-dc2e3aeff032 ====================
+14:53:49.720211 [info ]: dbt-fusion 2.0.0-preview.193
+14:53:49.721876 [info ]: Started loading project
+14:53:49.728433 [info ]: Loading profiles.yml
+14:53:49.729504 [info ]: Finished loading project [  0.01s]
+14:53:49.729677 [info ]: Started debugging
+14:53:49.729909 [info ]: Debugging profile: dev
+14:53:49.730156 [info ]: Debugging dbt version: 2.0.0-preview.193
+14:53:49.730373 [info ]: Debugging platform: windows x86_64 (windows)
+14:53:49.730606 [info ]: Debugging adapter type: databricks (remote)
+14:53:49.780989 [info ]: Debugging dependencies:
+  git: OK
+14:53:49.782504 [info ]: Debugging connection:
+  "schema": "staging",
+  "host": "dbc-8c9d4533-f1a4.cloud.databricks.com",
+  "http_path": "/sql/1.0/warehouses/20f87554a69e881f"
+14:54:04.171742 [debug]: Query executed on node unknown:
+select 1 as id
+14:54:04.172071 [info ]: Debugging connection test: OK
+14:54:04.172876 [info ]: Debugged All checks passed!
+14:54:04.173937 [info ]: Finished debugging [ 14.44s]
+14:54:04.573267 [info ]: New version available 2.0.0-preview.196 (run `dbt system update`)
+14:54:04.629552 [info ]: 
+==================== Execution Summary =====================
+Finished 'debug' successfully for target 'dev' [14.9s]
+[0m11:00:17.294251 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029152F159C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002915407CA60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002915407C880>]}
+
+
+============================== 11:00:17.298113 | 156bd280-7c03-4282-a4c7-34883e12c919 ==============================
+[0m11:00:17.298113 [info ] [MainThread]: Running with dbt=1.11.11
+[0m11:00:17.298113 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\geflo\\OneDrive\\Documents\\DEV\\GitHub\\dbt_pipeline\\dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\geflo\\OneDrive\\Documents\\DEV\\GitHub\\dbt_pipeline\\dbt_project\\logs'}
+[0m11:00:18.627842 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m11:00:18.627842 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m11:00:18.627842 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m11:00:20.060763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '156bd280-7c03-4282-a4c7-34883e12c919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029153758AC0>]}
+[0m11:00:20.235156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '156bd280-7c03-4282-a4c7-34883e12c919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002915407F970>]}
+[0m11:00:20.235156 [info ] [MainThread]: Registered adapter: databricks=1.12.1
+[0m11:00:21.158671 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m11:00:21.158671 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:00:21.158671 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '156bd280-7c03-4282-a4c7-34883e12c919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029153B9DCC0>]}
+[0m11:00:28.454562 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_pipeline.marts
+- models.dbt_pipeline.intermediate
+[0m11:00:28.472540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '156bd280-7c03-4282-a4c7-34883e12c919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029178178130>]}
+[0m11:00:28.780059 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\geflo\OneDrive\Documents\DEV\GitHub\dbt_pipeline\dbt_project\target\manifest.json
+[0m11:00:28.780059 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\geflo\OneDrive\Documents\DEV\GitHub\dbt_pipeline\dbt_project\target\semantic_manifest.json
+[0m11:00:28.939449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '156bd280-7c03-4282-a4c7-34883e12c919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000291569D75B0>]}
+[0m11:00:28.949513 [info ] [MainThread]: Found 1 model, 759 macros
+[0m11:00:28.951527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '156bd280-7c03-4282-a4c7-34883e12c919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029152FC9B10>]}
+[0m11:00:28.954334 [info ] [MainThread]: 
+[0m11:00:28.954334 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:00:28.958588 [info ] [MainThread]: 
+[0m11:00:28.958588 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m11:00:28.958588 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m11:00:28.961942 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_dbt_pipeline1) - Creating connection
+[0m11:00:28.961942 [debug] [ThreadPool]: Acquiring new databricks connection 'list_dbt_pipeline1'
+[0m11:00:28.988114 [debug] [ThreadPool]: Using databricks connection "list_dbt_pipeline1"
+[0m11:00:28.990541 [debug] [ThreadPool]: On list_dbt_pipeline1: /* {"app": "dbt", "dbt_version": "1.11.11", "dbt_databricks_version": "1.12.1", "databricks_sql_connector_version": "4.2.6", "profile_name": "dbt_pipeline", "target_name": "dev", "invocation_id": "156bd280-7c03-4282-a4c7-34883e12c919", "connection_name": "list_dbt_pipeline1"} */
+
+    
+
+  SHOW SCHEMAS IN `dbt_pipeline1`
+
+
+  
+[0m11:00:28.991491 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:00:30.244273 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f177b9-17fd-1e84-8169-d4c587d1505d) - Created
+[0m11:00:31.062714 [debug] [ThreadPool]: SQL status: OK in 2.070 seconds
+[0m11:00:31.111494 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f177b9-17fd-1e84-8169-d4c587d1505d, command-id=01f177b9-182d-11db-b30e-faa9013c8da7) - Closing
+[0m11:00:31.126423 [debug] [ThreadPool]: On list_dbt_pipeline1: Close
+[0m11:00:31.128433 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f177b9-17fd-1e84-8169-d4c587d1505d) - Closing
+[0m11:00:31.233007 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_dbt_pipeline1_staging) - Creating connection
+[0m11:00:31.233007 [debug] [ThreadPool]: Acquiring new databricks connection 'list_dbt_pipeline1_staging'
+[0m11:00:31.249120 [debug] [ThreadPool]: Using databricks connection "list_dbt_pipeline1_staging"
+[0m11:00:31.249120 [debug] [ThreadPool]: On list_dbt_pipeline1_staging: /* {"app": "dbt", "dbt_version": "1.11.11", "dbt_databricks_version": "1.12.1", "databricks_sql_connector_version": "4.2.6", "profile_name": "dbt_pipeline", "target_name": "dev", "invocation_id": "156bd280-7c03-4282-a4c7-34883e12c919", "connection_name": "list_dbt_pipeline1_staging"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'dbt_pipeline1'
+  AND table_schema = 'staging'
+
+  
+[0m11:00:31.249120 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:00:31.584489 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f177b9-18e8-1418-9352-f12e4b4a745b) - Created
+[0m11:00:33.069906 [debug] [ThreadPool]: SQL status: OK in 1.820 seconds
+[0m11:00:33.074439 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f177b9-18e8-1418-9352-f12e4b4a745b, command-id=01f177b9-18f9-18c4-816f-107d482c8095) - Closing
+[0m11:00:33.074439 [debug] [ThreadPool]: On list_dbt_pipeline1_staging: Close
+[0m11:00:33.074439 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f177b9-18e8-1418-9352-f12e4b4a745b) - Closing
+[0m11:00:33.189209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '156bd280-7c03-4282-a4c7-34883e12c919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029156AAFF70>]}
+[0m11:00:33.252853 [debug] [Thread-3 (]: Began running node model.dbt_pipeline.stg_smoke_test
+[0m11:00:33.252853 [info ] [Thread-3 (]: 1 of 1 START sql view model staging.stg_smoke_test ............................. [RUN]
+[0m11:00:33.252853 [debug] [Thread-3 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.dbt_pipeline.stg_smoke_test) - Creating connection
+[0m11:00:33.257816 [debug] [Thread-3 (]: Acquiring new databricks connection 'model.dbt_pipeline.stg_smoke_test'
+[0m11:00:33.257816 [debug] [Thread-3 (]: Began compiling node model.dbt_pipeline.stg_smoke_test
+[0m11:00:33.257816 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_pipeline.stg_smoke_test"
+[0m11:00:33.273610 [debug] [Thread-3 (]: Began executing node model.dbt_pipeline.stg_smoke_test
+[0m11:00:33.311977 [debug] [Thread-3 (]: MATERIALIZING VIEW
+[0m11:00:33.367980 [debug] [Thread-3 (]: Creating view `dbt_pipeline1`.`staging`.`stg_smoke_test`
+[0m11:00:33.393035 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_pipeline.stg_smoke_test"
+[0m11:00:33.399954 [debug] [Thread-3 (]: Using databricks connection "model.dbt_pipeline.stg_smoke_test"
+[0m11:00:33.406989 [debug] [Thread-3 (]: On model.dbt_pipeline.stg_smoke_test: /* {"app": "dbt", "dbt_version": "1.11.11", "dbt_databricks_version": "1.12.1", "databricks_sql_connector_version": "4.2.6", "profile_name": "dbt_pipeline", "target_name": "dev", "invocation_id": "156bd280-7c03-4282-a4c7-34883e12c919", "node_id": "model.dbt_pipeline.stg_smoke_test"} */
+
+  
+  
+  
+  create or replace view `dbt_pipeline1`.`staging`.`stg_smoke_test`
+  
+  as (
+    select 1 as id, 'scaffold_ok' as status
+  )
+
+[0m11:00:33.406989 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:00:33.756351 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f177b9-1a32-13a3-a06f-86e4ded2606f) - Created
+[0m11:00:34.601867 [debug] [Thread-3 (]: SQL status: OK in 1.190 seconds
+[0m11:00:34.601867 [debug] [Thread-3 (]: Databricks adapter: Cursor(session-id=01f177b9-1a32-13a3-a06f-86e4ded2606f, command-id=01f177b9-1a46-1127-9464-a35aa286cdf7) - Closing
+[0m11:00:34.633891 [debug] [Thread-3 (]: Applying tags to relation None
+[0m11:00:34.639929 [debug] [Thread-3 (]: On model.dbt_pipeline.stg_smoke_test: Close
+[0m11:00:34.639929 [debug] [Thread-3 (]: Databricks adapter: Connection(session-id=01f177b9-1a32-13a3-a06f-86e4ded2606f) - Closing
+[0m11:00:34.758054 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '156bd280-7c03-4282-a4c7-34883e12c919', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029151B6D6C0>]}
+[0m11:00:34.758054 [info ] [Thread-3 (]: 1 of 1 OK created sql view model staging.stg_smoke_test ........................ [[32mOK[0m in 1.48s]
+[0m11:00:34.758054 [debug] [Thread-3 (]: Finished running node model.dbt_pipeline.stg_smoke_test
+[0m11:00:34.758054 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m11:00:34.758054 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m11:00:34.758054 [info ] [MainThread]: 
+[0m11:00:34.758054 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 5.80 seconds (5.80s).
+[0m11:00:34.774126 [debug] [MainThread]: Command end result
+[0m11:00:34.829477 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\geflo\OneDrive\Documents\DEV\GitHub\dbt_pipeline\dbt_project\target\manifest.json
+[0m11:00:34.844983 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\geflo\OneDrive\Documents\DEV\GitHub\dbt_pipeline\dbt_project\target\semantic_manifest.json
+[0m11:00:34.855959 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\geflo\OneDrive\Documents\DEV\GitHub\dbt_pipeline\dbt_project\target\run_results.json
+[0m11:00:34.855959 [info ] [MainThread]: 
+[0m11:00:34.857979 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:00:34.857979 [info ] [MainThread]: 
+[0m11:00:34.860896 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m11:00:34.860896 [debug] [MainThread]: Command `dbt run` succeeded at 11:00:34.860896 after 17.71 seconds
+[0m11:00:34.860896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029152F159C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029153759E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029153009150>]}
+[0m11:00:34.860896 [debug] [MainThread]: Flushing usage events
+[0m11:00:35.150386 [debug] [MainThread]: An error was encountered while trying to flush usage events
