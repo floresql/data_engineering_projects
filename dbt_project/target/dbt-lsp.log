@@ -1,0 +1,61 @@
+==================== 2026-07-04T14:01:36.140192Z | 00000000-0000-0000-0000-000000000000 ====================
+==================== 2026-07-04T14:01:36.148050Z | 6e1b9619-f4ea-46f9-b0ae-e41a6c2d3a73 ====================
+14:01:36.148541 [info ]: Starting dbt LSP server
+14:01:36.149636 [info ]: Connecting to LSP client on port 8000
+14:01:36.155612 [info ]: Successfully connected to LSP client
+14:01:36.155865 [info ]: Creating LSP service...
+14:01:36.378049 [info ]: Creating LSP server...
+14:01:36.378090 [info ]: Starting LSP server...
+14:01:41.290448 [info ]: Loading profiles.yml
+14:01:41.391809 [info ]: Started loading project
+14:01:41.403193 [info ]: Loading profiles.yml
+14:01:41.439345 [debug]:    Started loading packages
+14:01:41.446713 [debug]:     Loaded [  0.01s] packages
+14:01:41.461466 [info ]: Finished loading project [  0.07s]
+14:01:41.470953 [info ]: Started parsing
+14:01:41.607582 [warn ]: [UnusedResourceConfigPath (dbt1097)]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 3 unused configuration paths:
+- models.dbt_pipeline.intermediate
+- models.dbt_pipeline.marts
+- models.dbt_pipeline.staging
+14:01:41.613968 [info ]: Cached model count updated: 0 models (estimate)
+14:01:41.613986 [info ]: Cached model count updated: 0 models (accurate)
+14:01:41.615756 [info ]: Started scheduling
+14:01:41.620519 [info ]: Finished scheduling [  0.00s]
+14:01:41.620564 [debug]: Compilation - 0 nodes selected: {}
+14:01:41.621668 [warn ]: [NoNodesForSelectionCriteria (dbt1092)]: The selection criterion '' does not match any enabled nodes
+14:01:41.621697 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+14:01:41.621925 [info ]: Started scheduling
+14:01:41.622358 [info ]: Finished scheduling [  0.00s]
+14:01:42.296730 [debug]: Requesting license from https://aj466.us1.dbt.com/api/private/accounts/70471823553777/feature-licenses/ with 1 key IDs: ["fusion-prod-2025-11-20"]
+14:01:42.559194 [debug]: License successfully retrieved from remote
+14:01:42.565231 [debug]: License loaded from remote server aj466.us1.dbt.com
+14:01:42.566956 [debug]: License cached to file for account 70471823553777
+14:01:42.567705 [debug]: License check failed: Feature not licensed: 'lineage'
+14:01:42.573880 [info ]: Started building task graph
+14:01:42.578137 [info ]: Finished building task graph [  0.00s]
+14:01:42.712780 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. fs lint/format only supports SQLFluff templater 'dbt' or 'dbt-cloud'. Continuing anyway.
+14:01:42.720255 [info ]:    Started linting
+14:01:42.722274 [info ]:   Finished [  0.00s] linting
+14:01:42.730434 [info ]: Started scheduling
+14:01:42.730502 [info ]: Finished scheduling [  0.00s]
+14:01:42.733505 [info ]: Cached model count updated: 0 models (accurate)
+14:01:42.733576 [info ]: Finished parsing [  1.26s]
+14:01:44.376026 [info ]: Started loading project
+14:01:44.377060 [info ]: Loading profiles.yml
+14:01:44.448587 [info ]: Cached model count updated: 0 models (estimate)
+14:01:44.448624 [info ]: Cached model count updated: 0 models (accurate)
+14:01:44.448642 [info ]: Started scheduling
+14:01:44.448679 [info ]: Finished scheduling [  0.00s]
+14:01:44.448795 [debug]: Compilation - 0 nodes selected: {}
+14:01:44.449385 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+14:01:44.451541 [debug]: License check failed: Feature not licensed: 'lineage'
+14:01:44.452150 [info ]: Started building task graph
+14:01:44.452186 [info ]: Finished building task graph [  0.00s]
+14:01:44.514968 [warn ]: [NotSupported (dbt9000)]: SQLFluff templater 'jinja' is not supported. fs lint/format only supports SQLFluff templater 'dbt' or 'dbt-cloud'. Continuing anyway.
+14:01:44.520130 [info ]:    Started linting
+14:01:44.520438 [info ]:   Finished [  0.00s] linting
+14:01:44.526214 [info ]: Started scheduling
+14:01:44.526253 [info ]: Finished scheduling [  0.00s]
+14:01:44.526462 [info ]: Finished loading project [  0.15s]
+14:01:44.527195 [info ]: Cached model count updated: 0 models (accurate)
